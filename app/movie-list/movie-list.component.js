@@ -1,11 +1,10 @@
 'use strict';
 
-// Register `phoneList` component, along with its associated controller and template
 angular.
-  module('phoneList').
-  component('phoneList', {
-    templateUrl: 'phone-list/phone-list.template.html',
-    controller: function PhoneListController() {
+  module('movieList').
+  component('movieList', {
+    templateUrl: 'movie-list/movie-list.template.html',
+    controller: function MovieListController() {
       this.phones = [
         {
           name: 'Nexus S',
