@@ -5,16 +5,16 @@ angular.
   component('movieList', {
     templateUrl: 'movie-list/movie-list.template.html',
     controller: function MovieListController() {
-      this.phones = [
+      this.movies = [
         {
-          name: 'Nexus S',
-          snippet: 'Fast just got faster with Nexus S.'
+          name: 'The Shawshank Redemption',
+          snippet: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.'
         }, {
-          name: 'Motorola XOOM™ with Wi-Fi',
-          snippet: 'The Next, Next Generation tablet.'
+          name: 'The Godfather',
+          snippet: 'The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.'
         }, {
-          name: 'MOTOROLA XOOM™',
-          snippet: 'The Next, Next Generation tablet.'
+          name: 'The Godfather: Part II',
+          snippet: 'The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.'
         }
       ];
     }

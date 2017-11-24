@@ -7,10 +7,10 @@ describe('movieList', function() {
   // Test the controller
   describe('MovieListController', function() {
 
-    it('should create a `phones` model with 3 phones', inject(function($componentController) {
+    it('should create a `movies` model with 3 movies', inject(function($componentController) {
       var ctrl = $componentController('movieList');
 
-      expect(ctrl.phones.length).toBe(3);
+      expect(ctrl.movies.length).toBe(3);
     }));
 
   });
