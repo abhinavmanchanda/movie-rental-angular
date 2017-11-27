@@ -6,6 +6,9 @@
           <img ng-src="{{movie.imageUrl}}" alt="{{movie.name}}" class="thumb"/>
           <span>{{movie.name}}</span>
           <p>{{movie.snippet}}</p>
+          <div class="col-sm-2">
+              <button ng-click="$ctrl.reserveItem(movie)" class="btn btn-primary">{{movie.reserved?"Return":"Reserve"}}</button>
+          </div>
         </li>
       </ul>
     </div>
