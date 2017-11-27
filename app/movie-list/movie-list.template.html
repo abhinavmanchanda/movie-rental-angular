@@ -1,6 +1,13 @@
-<ul>
-  <li ng-repeat="movie in $ctrl.movies">
-    <span>{{movie.name}}</span>
-    <p>{{movie.snippet}}</p>
-  </li>
-</ul>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10">
+      <ul class="movies">
+        <li ng-repeat="movie in $ctrl.movies" class="movie-list-item">
+          <img ng-src="{{movie.imageUrl}}" alt="{{movie.name}}" class="thumb"/>
+          <span>{{movie.name}}</span>
+          <p>{{movie.snippet}}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
