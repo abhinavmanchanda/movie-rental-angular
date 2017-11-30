@@ -29,4 +29,13 @@ describe('MovieListController', function() {
     expect(secondMovie.reserved).toBe(false);
   });
 
+  it('should display the count of selected movies', function(){
+    var secondMovie = movieListController.movies[1];
+    var fifthMovie = movieListController.movies[4];
+    movieListController.reserveItem(secondMovie);
+    expect(movieListController.reservedItemCount()).toBe(1);
+    movieListController.reserveItem(fifthMovie);
+    expect(movieListController.reservedItemCount()).toBe(2);
+  })
+
 });

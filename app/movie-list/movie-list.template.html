@@ -3,10 +3,8 @@
     <div class="col-md-2">
       <!--Sidebar content-->
 
-      <p>
-        Search:
-        <input ng-model="$ctrl.query" />
-      </p>
+      <p>The total number of movies : {{$ctrl.movies.length}}</p>
+      <p>Number of movies reserved : {{$ctrl.reservedItemCount()}}</p>
 
     </div>
     <div class="col-md-10">
