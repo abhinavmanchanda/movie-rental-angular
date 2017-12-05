@@ -37,5 +37,10 @@ angular.
       self.reserveItem = function(currentMovie){
         currentMovie.reserved = !(currentMovie.reserved);
       };
+      self.reservedItemCount = function(){
+        return self.movies.reduce(function(n, movie){
+          return n + (movie.reserved ? 1 : 0);
+        },0);
+      };
     }
   });

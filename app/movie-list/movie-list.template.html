@@ -1,5 +1,12 @@
 <div class="container-fluid">
   <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      <p>The total number of movies : {{$ctrl.movies.length}}</p>
+      <p>Number of movies reserved : {{$ctrl.reservedItemCount()}}</p>
+
+    </div>
     <div class="col-md-10">
       <ul class="movies">
         <li ng-repeat="movie in $ctrl.movies" class="movie-list-item">
