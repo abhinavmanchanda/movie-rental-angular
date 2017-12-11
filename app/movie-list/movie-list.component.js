@@ -34,7 +34,7 @@ angular.
                 "snippet": "Too cool for school."
               }
       ];
-      self.reserveItem = function(currentMovie){
+      self.toggleItemState = function(currentMovie){
         currentMovie.reserved = !(currentMovie.reserved);
       };
       self.reservedItemCount = function(){
