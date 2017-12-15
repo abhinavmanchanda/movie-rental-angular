@@ -1,7 +1,7 @@
 //jshint strict: false
 module.exports = function(config) {
   config.set({
- 
+
     basePath: './',
 
     files: [
@@ -14,7 +14,13 @@ module.exports = function(config) {
       'test/**/*.spec.js'
     ],
 
+    preprocessors: {
+      'app/**/*.js': ['coverage']
+    },
     autoWatch: true,
+
+    reporters: ['coverage'],
+    coverageReporter: {type:'html', dir: 'coverage/'},
 
     frameworks: ['jasmine'],
 
@@ -22,7 +28,8 @@ module.exports = function(config) {
 
     plugins: [
       'karma-chrome-launcher',
-      'karma-jasmine'
+      'karma-jasmine',
+      'karma-coverage'
     ]
 
   });
