@@ -14,7 +14,7 @@
           <span>{{movie.name}}</span>
           <p>{{movie.snippet}}</p>
           <div class="col-sm-2">
-              <button ng-click="$ctrl.reserveItem(movie)" ng-class="{true: 'btn-primary', false: 'btn-danger'}[!movie.reserved]">{{movie.reserved?"Return":"Reserve"}}</button>
+              <button ng-click="$ctrl.toggleItemState(movie)" ng-class="{true: 'btn-primary', false: 'btn-danger'}[!movie.reserved]">{{movie.reserved?"Return":"Reserve"}}</button>
           </div>
         </li>
       </ul>
