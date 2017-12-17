@@ -2,13 +2,12 @@
 
 angular.
   module('movieList').
-  factory('movieListService', ['$resource',
-    function($resource) {
-      return $resource('app/movies/movies.json', {}, {
-        query: {
-          method: 'GET',
-          isArray: true
-        }
-      });
-    }
-  ]);
+  factory('movieListService', function($http) {
+   return {
+     getMovies: function() {
+       return $http.get('https://movie-rental-51a59.firebaseio.com/movies.json').then(function(result) {
+         return result.data;
+       });
+     }
+   }
+});

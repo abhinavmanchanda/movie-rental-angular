@@ -6,14 +6,21 @@ angular.
     templateUrl: 'app/movie-list/movie-list.template.html',
     controller: function MovieListController(movieListService) {
       var self = this;
-      self.movies = movieListService.query();
-      self.toggleItemState = function(currentMovie){
+      movieListService.getMovies().then(function(movieList){
+        self.movies = movieList;
+
+        self.reservedItemCount = function(){
+          return self.movies.reduce(function(n, movie){
+            return n + (movie.reserved ? 1 : 0);
+          },0);
+        };
+      }, function() {
+        self.failed = true;
+        console.log("Sorry couldn't fetch movies");
+      });
+      self.reserveItem = function(currentMovie){
         currentMovie.reserved = !(currentMovie.reserved);
       };
-      self.reservedItemCount = function(){
-        return self.movies.reduce(function(n, movie){
-          return n + (movie.reserved ? 1 : 0);
-        },0);
-      };
+
     }
   });
